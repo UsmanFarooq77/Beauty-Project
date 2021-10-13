@@ -81,3 +81,70 @@ function apply_filter(service_value) {
         }
     }
 }
+
+// Full Screen Image With Js
+
+var popup_image_full_screen_domRef = getDomReference('popUpImageFullScreen');
+var popup_image_domRef = getDomReference('popup_image_id_1');
+var all_images = [];
+var parlourImage = [];
+var imageCounter = 0;
+let parlour = getDomReference('parlour');
+let parlourLength = parlour.children.length;
+
+for (let i = 1; i < parlourLength; i++) {
+    parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
+}
+all_images = parlourImage;
+
+function popUpImage(srcImage) {
+    popup_image_domRef.style.display = 'block';
+    for (let i = 0; i <= all_images.length - 1; i++) {
+        imageCounter = i;
+        if (srcImage == all_images[i]) {
+            if (i > 0) {
+                arrow_circle_left_id.style.color = '#ffffff';
+            }
+            if (i == all_images.length - 1) {
+                arrow_circle_right_id.style.color = 'rgba(0,0,0,0.5)';
+            }
+            popup_image_full_screen_domRef.src = srcImage;
+            return;
+        }
+    }
+}
+
+function popupClose() {
+    popup_image_domRef.style.display = 'none';
+    imageCounter = 0;
+    arrow_circle_right_id.style.color = '#ffffff';
+}
+
+
+function popUpImageRightArrow() {
+    if (imageCounter < all_images.length - 1) {
+        arrow_circle_left_id.style.color = '#ffffff';
+        imageCounter++;
+        popup_image_full_screen_domRef.src = all_images[imageCounter];
+    }
+    else {
+        popup_image_full_screen_domRef.src = all_images[imageCounter];
+    }
+    if (imageCounter == all_images.length - 1) {
+        arrow_circle_right_id.style.color = 'rgba(0,0,0,0.5)';
+    }
+}
+
+function popUpImageLeftArrow() {
+    if (imageCounter > 0) {
+        arrow_circle_right_id.style.color = '#ffffff';
+        imageCounter--;
+        popup_image_full_screen_domRef.src = all_images[imageCounter];
+    }
+    if (imageCounter == 0) {
+        arrow_circle_left_id.style.color = 'rgba(0,0,0,0.5)';
+    }
+}
+function getDomReference(id) {
+    return document.getElementById(id);
+}

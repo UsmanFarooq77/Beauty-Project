@@ -114,22 +114,91 @@
             <p onclick="cosmetic_products_filter('cosmetic')">Cosmetic Products</p>
             <p onclick="bridal_filter('makeup')">Bridal Make-Up</p>
           </div>
-          <div id="parlour" class="parlour_images">
-            <div class="beauty_parlour_image_1">
-              <img src="./assets/images/beauty_parlour_1.jpg" alt="" width="100%" height="246.44px">
-              <div class="full_screen_image">
-                <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
-                <h3 class="click_me">Click Me</h3>
+          <div class="parlour_images">
+            <div id="parlour" class="beauty_parlour_image_1">
+              <div id="popup_image_id_1" class="popup_image_main_div">
+                <p class="popup_close">
+                  <span>
+                    <i class="fa fa-close" onclick="popupClose()"></i>
+                  </span>
+                </p>
+                <div class="popup_image">
+                  <span>
+                    <i id="arrow_circle_left_id" class="fa fa-arrow-circle-left"
+                      onclick="popUpImageLeftArrow()"></i>
+                  </span>
+                  <img id="popUpImageFullScreen" src="" alt="" width="60%">
+                  <span>
+                    <i id="arrow_circle_right_id" class="fa fa-arrow-circle-right"
+                      onclick="popUpImageRightArrow()"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_1.jpg')">
+                <img src="./assets/images/beauty_parlour_1.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_2.jpg')">
+                <img src="./assets/images/beauty_parlour_2.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_3.jpg')">
+                <img src="./assets/images/beauty_parlour_3.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_4.jpg')">
+                <img src="./assets/images/beauty_parlour_4.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_5.jpg')">
+                <img src="./assets/images/beauty_parlour_5.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_6.jpg')">
+                <img src="./assets/images/beauty_parlour_6.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_7.jpg')">
+                <img src="./assets/images/beauty_parlour_7.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
+              </div>
+              <div class="image_position"
+                onclick="popUpImage('./assets/images/beauty_parlour_8.jpg')">
+                <img src="./assets/images/beauty_parlour_8.jpg" alt="" width="100%" height="246.44px">
+                <div class="image_hover">
+                  <span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                  <h3 class="click_me">Click Me</h3>
+                </div>
               </div>
             </div>
-            <img id="image_2" src="./assets/images/beauty_parlour_2.jpg" alt="" width="33.33%" height="auto">
-            <img id="image_3" src="./assets/images/beauty_parlour_3.jpg" alt="" width="33.33%" height="auto">
-            <img src="./assets/images/beauty_parlour_4.jpg" alt="" width="33.33%" height="auto">
-            <img src="./assets/images/beauty_parlour_5.jpg" alt="" width="33.33%" height="auto">
-            <img src="./assets/images/beauty_parlour_6.jpg" alt="" width="33.33%" height="auto">
-            <img src="./assets/images/beauty_parlour_7.jpg" alt="" width="33.33%" height="auto">
-            <img src="./assets/images/beauty_parlour_8.jpg" alt="" width="33.33%" height="auto">
-
           </div>
           <div id="logo" class="logo_images">
             <img src="./assets/images/beauty_logo_1.png" alt="" width="33.33%" height="auto">
@@ -152,6 +221,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="./js/main.js"></script>
+
 </body>
 
 </html>

@@ -339,11 +339,15 @@
   width: 100%;
 }
 .gallery_section .parlour_images .beauty_parlour_image_1 {
-  position: relative;
-  width: 33.33%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   height: auto;
 }
-.gallery_section .parlour_images .beauty_parlour_image_1 .full_screen_image {
+.gallery_section .parlour_images .image_position {
+  position: relative;
+}
+.gallery_section .parlour_images .image_position .image_hover {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -352,10 +356,7 @@
   left: 0px;
   opacity: 0;
 }
-.gallery_section
-  .parlour_images
-  .beauty_parlour_image_1:hover
-  .full_screen_image {
+.gallery_section .parlour_images .image_position:hover .image_hover {
   opacity: 1;
   cursor: pointer;
 }
@@ -363,6 +364,7 @@
 .gallery_section
   .parlour_images
   .beauty_parlour_image_1
+  .image_hover
   .fa-arrow-circle-right {
   font-size: 2rem;
   float: right;
@@ -390,15 +392,15 @@
   flex-wrap: wrap;
   width: 100%;
 }
-
-@media (min-width: 426px) and (max-width: 768px) {
+/* 
+@media (min-width: 426px) and (max-width: 992px) {
   .gallery_section .beauty_parlour_image_1 {
-    width: 50% !important;
+    width: 100%;
   }
   .gallery_section img {
     width: 100%;
   }
-}
+} */
 
 @media (max-width: 425px) {
   .gallery_section .gallery_categories {
@@ -415,5 +417,87 @@
     /* display: grid; */
     min-height: 100vh !important;
     /* opacity: 1; */
+  }
+}
+
+/* .popup_image_main_div {
+  display: block;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  display: block;
+} */
+
+#popup_image_id_1 {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  opacity: 1;
+  display: none;
+}
+#popup_image_id_1 .popup_close {
+  color: #ffffff;
+  text-align: center;
+  padding: 48px;
+}
+#popup_image_id_1 .popup_close span {
+  border: 3px solid #fafafa;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 41px;
+  text-align: center;
+}
+
+#popup_image_id_1 .popup_close span i {
+  cursor: pointer;
+}
+#popup_image_id_1 .popup_image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#popup_image_id_1 .popup_image .fa-arrow-circle-left {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#popup_image_id_1 .popup_image .fa-arrow-circle-right {
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+#popUpImageFullScreen {
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.parlour_images .beauty_parlour_image_1 .image_position {
+  width: 33.33%;
+  height: auto;
+}
+
+@media (min-width: 525px) and (max-width: 992px) {
+  .gallery_section .beauty_parlour_image_1 {
+    width: 100%;
+  }
+  .gallery_section .parlour_images .image_position {
+    width: 50%;
+  }
+}
+@media (max-width: 524px) {
+  .gallery_section .parlour_images .image_position {
+    width: 100%;
   }
 }
