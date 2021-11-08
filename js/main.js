@@ -54,21 +54,63 @@ function closeResponsiveNavigation() {
 }
 
 // Our Services Gallery
-
+var popup_image_full_screen_domRef = getDomReference('popUpImageFullScreen');
+var popup_image_domRef = getDomReference('popup_image_id_1');
+var all_images = [];
+var parlourImage = [];
+var imageCounter = 0;
 var services = ['parlour', 'logo', 'cosmetic', 'makeup'];
+
+
+// let parlour = getDomReference('parlour');
+// let parlourLength = parlour.children.length;
+// parlourImage = [];
+// for (let i = 0; i < parlourLength; i++) {
+//     parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
+// }
+// all_images = parlourImage;
+window.onload = beauty_parlour_filter('parlour');
 
 function beauty_parlour_filter(value) {
     apply_filter(value);
+    let parlour = getDomReference('parlour');
+    let parlourLength = parlour.children.length;
+    parlourImage = [];
+    for (let i = 0; i < parlourLength; i++) {
+        parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
+    }
+    all_images = parlourImage;
 }
 
 function comapny_logo_filter(value) {
     apply_filter(value);
+    let parlour = getDomReference('logo');
+    let parlourLength = parlour.children.length;
+    parlourImage = [];
+    for (let i = 0; i < parlourLength; i++) {
+        parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
+    }
+    all_images = parlourImage;
 }
 function cosmetic_products_filter(value) {
     apply_filter(value);
+    let parlour = getDomReference('cosmetic');
+    let parlourLength = parlour.children.length;
+    parlourImage = [];
+    for (let i = 0; i < parlourLength; i++) {
+        parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
+    }
+    all_images = parlourImage;
 }
 function bridal_filter(value) {
     apply_filter(value);
+    let parlour = getDomReference('makeup');
+    let parlourLength = parlour.children.length;
+    parlourImage = [];
+    for (let i = 0; i < parlourLength; i++) {
+        parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
+    }
+    all_images = parlourImage;
 }
 
 function apply_filter(service_value) {
@@ -84,20 +126,11 @@ function apply_filter(service_value) {
 
 // Full Screen Image With Js
 
-var popup_image_full_screen_domRef = getDomReference('popUpImageFullScreen');
-var popup_image_domRef = getDomReference('popup_image_id_1');
-var all_images = [];
-var parlourImage = [];
-var imageCounter = 0;
-let parlour = getDomReference('parlour');
-let parlourLength = parlour.children.length;
 
-for (let i = 1; i < parlourLength; i++) {
-    parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
-}
-all_images = parlourImage;
+
 
 function popUpImage(srcImage) {
+    console.log(srcImage);
     popup_image_domRef.style.display = 'block';
     for (let i = 0; i <= all_images.length - 1; i++) {
         imageCounter = i;
@@ -118,6 +151,7 @@ function popupClose() {
     popup_image_domRef.style.display = 'none';
     imageCounter = 0;
     arrow_circle_right_id.style.color = '#ffffff';
+    arrow_circle_left_id.style.color = 'rgba(0,0,0,0.5)';
 }
 
 

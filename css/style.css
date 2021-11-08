@@ -331,23 +331,24 @@
 }
 .gallery_section .gallery_categories p:hover {
   background-color: tomato;
-  border-radius: 10%;
+  padding: 5px;
+  transition: all 0.5s linear;
 }
-.gallery_section .parlour_images {
+.gallery_section .service_images_section {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.gallery_section .parlour_images .beauty_parlour_image_1 {
+.gallery_section .service_images_section .service_images {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   height: auto;
 }
-.gallery_section .parlour_images .image_position {
+.gallery_section .service_images_section .image_position {
   position: relative;
 }
-.gallery_section .parlour_images .image_position .image_hover {
+.gallery_section .service_images_section .image_position .image_hover {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -356,21 +357,21 @@
   left: 0px;
   opacity: 0;
 }
-.gallery_section .parlour_images .image_position:hover .image_hover {
+.gallery_section .service_images_section .image_position:hover .image_hover {
   opacity: 1;
   cursor: pointer;
 }
 
 .gallery_section
-  .parlour_images
-  .beauty_parlour_image_1
+  .service_images_section
+  .service_images
   .image_hover
   .fa-arrow-circle-right {
   font-size: 2rem;
   float: right;
   color: #fafafa;
 }
-.gallery_section .parlour_images .beauty_parlour_image_1 .click_me {
+.gallery_section .service_images_section .service_images .click_me {
   background-color: white;
   color: #000;
   display: inline-block;
@@ -394,7 +395,7 @@
 }
 /* 
 @media (min-width: 426px) and (max-width: 992px) {
-  .gallery_section .beauty_parlour_image_1 {
+  .gallery_section .service_images {
     width: 100%;
   }
   .gallery_section img {
@@ -410,7 +411,7 @@
   .gallery_section img {
     width: 100%;
   }
-  .gallery_section .beauty_parlour_image_1 {
+  .gallery_section .service_images {
     width: 100% !important;
   }
   #responsive_navigation_section {
@@ -483,21 +484,21 @@
   max-height: 500px;
 }
 
-.parlour_images .beauty_parlour_image_1 .image_position {
+.service_images_section .service_images .image_position {
   width: 33.33%;
   height: auto;
 }
 
 @media (min-width: 525px) and (max-width: 992px) {
-  .gallery_section .beauty_parlour_image_1 {
+  .gallery_section .service_images {
     width: 100%;
   }
-  .gallery_section .parlour_images .image_position {
+  .gallery_section .service_images_section .image_position {
     width: 50%;
   }
 }
 @media (max-width: 524px) {
-  .gallery_section .parlour_images .image_position {
+  .gallery_section .service_images_section .image_position {
     width: 100%;
   }
 }
