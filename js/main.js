@@ -179,6 +179,48 @@ function popUpImageLeftArrow() {
         arrow_circle_left_id.style.color = 'rgba(0,0,0,0.5)';
     }
 }
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    // grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    // allowTouchMove: true,
+    // initialSlide: 1,
+    loop: true,
+    slideToclickedslide: true,
+    autoplay: false,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    coverflow: {
+        rotate: 0,
+        stretch: 100,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            centeredSlides: false,
+            effect: 'slide'
+        },
+        992: {
+            slidesPerView: 3,
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+$('.counter').counterUp({
+    delay: 10,
+    time: 3000
+});
+
 function getDomReference(id) {
     return document.getElementById(id);
 }
