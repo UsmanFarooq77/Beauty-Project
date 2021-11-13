@@ -10,32 +10,43 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="http://scriptpie.com/cubeportfolio/live-preview/cubeportfolio/css/cubeportfolio.min.css">
-  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+  <!-- <link rel="stylesheet" href="http://scriptpie.com/cubeportfolio/live-preview/cubeportfolio/css/cubeportfolio.min.css"> -->
 
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
   <div id="video_section_id" class="video_section">
-    <video loop autoplay>
-      <source src="./assets/videos/make_up.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+
+    <div class="bxslider">
+      <div> <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted">
+          <source src="./assets/videos/make_up.mp4" type="video/mp4" />
+        </video></div>
+      <div> <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted">
+          <source src="./assets/videos/make_up_2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></div>
+    </div>
+
 
     <div class="header_section" id="header">
       <header>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>Gallery</li>
-            <li>Logo</li>
-            <li>About</li>
-            <li>Clients</li>
-            <li>Contact</li>
+            <li><a href="#video_section_id">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li class="logo"><a href="#video_section_id">Logo</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#achievement">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-          <img id="hamBugerImage" src="./assets/images/hambuger_menu_icon.PNG" alt=""
-            onclick="openResponsiveNavigation()" />
+          <!-- <img id="hamBugerImage" src="./assets/images/hambuger_menu_icon.PNG" alt=""
+            onclick="openResponsiveNavigation()" /> -->
+          <span id="hamBugerImage"><i class="fa fa-bars" onclick="openResponsiveNavigation()"></i></span>
         </nav>
       </header>
     </div>
@@ -68,24 +79,24 @@
         <div class="row">
           <div class="col-md-12 col-lg-12 col-12">
             <div class="list_1">
-              <span>Home</span>
-              <span>Features</span>
+              <span><a href="#video_section_id">Home</a></span>
+              <span><a href="#services">Services</a></span>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 col-lg-12 col-12">
             <div class="list_2">
-              <span>Gallery</span>
-              <span>About</span>
+              <span><a href="#team">Team</a></span>
+              <span><a href="#protfolio">Portfolio</a></span>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 col-lg-12 col-12">
             <div class="list_3">
-              <span>Clients</span>
-              <span>Contact</span>
+              <span><a href="#achievement">Achievements</a></span>
+              <span><a href="#contact">Contact</a></span>
             </div>
           </div>
         </div>
@@ -101,9 +112,10 @@
         </ul>
       </div>
     </div>
-
   </div>
-  <div class="container">
+
+
+  <div id="services" class="container services">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-12">
         <div class="gallery_section">
@@ -243,7 +255,7 @@
     </div>
   </div>
   <!-- Swiper Our Team -->
-  <div class="container">
+  <div id="team" class="container">
     <div class="row">
       <div class="col-md-12 col-12 col-lg-12">
         <div class="team_section">
@@ -332,7 +344,7 @@
     </div>
   </div>
   <!-- Portfolio Section -->
-  <div class="container-fluid">
+  <!-- <div id="portfolio" class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <div class="portfolio_section">
@@ -498,130 +510,197 @@
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> -->
 
-              <!-- <div id="js-loadMore-mosaic-flat" class="cbp-l-loadMore-bgbutton">
+  <!-- <div id="js-loadMore-mosaic-flat" class="cbp-l-loadMore-bgbutton">
                     <a href="ajax-mosaic-flat/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
                         <span class="cbp-l-loadMore-defaultText">LOAD MORE (<span class="cbp-l-loadMore-loadItems">4</span>)</span>
                         <span class="cbp-l-loadMore-loadingText">LOADING...</span>
                         <span class="cbp-l-loadMore-noMoreLoading">NO MORE WORKS</span>
                     </a>
                 </div> -->
+  <!-- </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <section id="achievement">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="counter_section">
+            <div class="counter_heading">
+              <h1>Achievements</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui quae tenetur
+                nesciunt officia velit quia pariatur deserunt,
+                dolorum adipisci perspiciatis? Animi, enim harum vero nihil veniam modi at illum.</p>
+            </div>
+            <div class="counter_main_div">
+              <div class="counter_clients">
+                <div class="counter_icons">
+                  <span><i class="fa fa-user"></i></span>
+                </div>
+                <h1 class="counter">1,234,567</h1>
+                <h3> + Clients</h3>
+              </div>
+              <div class="counter_awards">
+                <div class="counter_icons">
+                  <span><i class="fa fa-trophy"></i></span>
+                </div>
+                <h1 class="counter">1,234</h1>
+                <h3> + Awards</h3>
+              </div>
+              <div class="counter_shops">
+                <div class="counter_icons">
+                  <span><i class="fa fa-building"></i></span>
+                </div>
+                <h1 class="counter">234,56</h1>
+                <h3> + Shops</h3>
+              </div>
+              <div class="counter_products">
+                <div class="counter_icons">
+                  <span><i class="fa fa-cube"></i></span>
+                </div>
+                <h1 class="counter">345,4</h1>
+                <h3> + Products</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="counter_section">
-          <div class="counter_main_div">
-            <div class="counter_clients">
-              <div class="counter_icons">
-                <span><i class="fa fa-user"></i></span>
-              </div>
-              <h1 class="counter">1,234,567</h1>
-              <h3> + Clients</h3>
+  </section>
+  <!-- Sponser Section -->
+  <section id="sponser">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-12 col-lg12">
+          <div class="sponser_section">
+            <div class="sponser_heading_section">
+              <h1>Our Sponsers</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aspernatur
+                possimus assumenda blanditiis veritatis qui impedit, ipsam vel doloremque similique excepturi
+                ea vero deserunt accusamus velit dolores explicabo natus. Perspiciatis.</p>
             </div>
-            <div class="counter_awards">
-              <div class="counter_icons">
-                <span><i class="fa fa-trophy"></i></span>
-              </div>
-              <h1 class="counter">1,234</h1>
-              <h3> + Awards</h3>
-            </div>
-            <div class="counter_shops">
-              <div class="counter_icons">
-                <span><i class="fa fa-building"></i></span>
-              </div>
-              <h1 class="counter">234,56</h1>
-              <h3> + Shops</h3>
-            </div>
-            <div class="counter_products">
-              <div class="counter_icons">
-                <span><i class="fa fa-cube"></i></span>
-              </div>
-              <h1 class="counter">345,4</h1>
-              <h3> + Products</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div class="footer_section">
-          <div class="row">
-            <div class="col-md-6 col-sm-6 footer_details">
-              <div class="footer_details_heading_paragraph">
-                <h1>
-                  Logo
-                </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ex dignissimos eius repellat maiores? Dolores optio fuga voluptatibus sint rem natus,
-                  quia tenetur illum omnis? Eum dolor eaque non eius fuga?</p>
-              </div>
-              <div class="headquarter_details">
-                <h4>Headquarters</h4>
-                <p>182 Roll Sonrock, 200 France</p>
-                <p>Paris, PY 87811</p>
-              </div>
-              <div class="contact_details">
-                <p><span>Phone:</span>(91) 49261 4799</p>
-                <p><span>Fax:</span>(19) 55 7899 5549</p>
-                <p><span>Email:</span>info@logo.com</p>
-              </div>
-              <div class="social_links">
-                <span><i class="fa fa-facebook"></i></span>
-                <span><i class="fa fa-twitter"></i></span>
-                <span><i class="fa fa-youtube"></i></span>
-                <span><i class="fa fa-google-plus"></i></span>
-              </div>
-              <div class="copy_rights">
-                <p>Copyrights &copy; 2021 All Rights Reserved by Logo Inc.</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6 footer_contact_us">
-              <h1>Contact Us</h1>
-              <div class="contact_form">
-                <form action="">
-                  <div>
-                    <input type="text" placeholder="Full Name">
+            <div class="owl-carousel owl-theme owl-loaded">
+              <div class="owl-stage-outer">
+                <div class="owl-stage">
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_1.jpg" alt="" width="300px" height="200px">
                   </div>
-                  <input type="email" placeholder="Email Address">
-                  <textarea name="" id="" cols="40" rows="5" placeholder="Message"></textarea>
-                  <button type="submit">Send</button>
-                </form>
-              </div>
-              <div class="navigation_links">
-                <p>Home / Features / Team / Work / Pricing / Client / Contact</p>
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_2.jpg" alt="" width="300px" height="200px">
+                  </div>
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_3.jpg" alt="" width="300px" height="200px">
+                  </div>
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_4.jpg" alt="" width="300px" height="200px">
+                  </div>
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_5.jpg" alt="" width="300px" height="200px">
+                  </div>
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_6.jpg" alt="" width="300px" height="200px">
+                  </div>
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_7.jpg" alt="" width="300px" height="200px">
+                  </div>
+                  <div class="owl-item">
+                    <img src="./assets/images/sponser_logo_8.jpg" alt="" width="300px" height="200px">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <!-- Footer Section -->
+  <section id="contact">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer_section">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 footer_details">
+                <div class="footer_details_heading_paragraph">
+                  <h1>
+                    Logo
+                  </h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ex dignissimos eius repellat maiores? Dolores optio fuga voluptatibus sint rem natus,
+                    quia tenetur illum omnis? Eum dolor eaque non eius fuga?</p>
+                </div>
+                <div class="headquarter_details">
+                  <h4>Headquarters</h4>
+                  <p>182 Roll Sonrock, 200 France</p>
+                  <p>Paris, PY 87811</p>
+                </div>
+                <div class="contact_details">
+                  <p><span>Phone:</span>(91) 49261 4799</p>
+                  <p><span>Fax:</span>(19) 55 7899 5549</p>
+                  <p><span>Email:</span>info@logo.com</p>
+                </div>
+                <div class="social_links">
+                  <span><i class="fa fa-facebook"></i></span>
+                  <span><i class="fa fa-twitter"></i></span>
+                  <span><i class="fa fa-youtube"></i></span>
+                  <span><i class="fa fa-google-plus"></i></span>
+                </div>
+                <div class="copy_rights">
+                  <p>Copyrights &copy; 2021 All Rights Reserved by Logo Inc.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 footer_contact_us">
+                <h1>Contact Us</h1>
+                <div class="contact_form">
+                  <form action="">
+                    <div>
+                      <input type="text" placeholder="Full Name">
+                    </div>
+                    <input type="email" placeholder="Email Address">
+                    <textarea name="" id="" cols="40" rows="5" placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                  </form>
+                </div>
+                <div class="navigation_links">
+                  <ul>
+                    <li><a href="#video_section_id">Home</a><span>/</span></li>
+                    <li><a href="#services"> Services</a><span>/</span></li>
+                    <li><a href="#team"> Team</a><span>/</span></li>
+                    <li><a href="#portfolio"> Portfolio</a><span>/</span></li>
+                    <li><a href="#achievement"> Achievements</a><span>/</span></li>
+                    <li><a href="#contact"> Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script type="text/javascript"
+  <!-- <script type="text/javascript"
     src="http://scriptpie.com/cubeportfolio/live-preview/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
   <script type="text/javascript"
-    src="http://scriptpie.com/cubeportfolio/live-preview/templates/mosaic/js/main.js"></script>
-  <!-- <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script> -->
+    src="http://scriptpie.com/cubeportfolio/live-preview/templates/mosaic/js/main.js"></script> -->
   <script src="./jQuery/jquery.waypoints.min.js"></script>
   <script src="./jQuery/jquery.counterup.min.js"></script>
+  <script src="./jQuery/jquery.smoothscroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"
+    integrity="sha512-/2sZKAsHDmHNoevKR/xsUKe+Bpf692q4tHNQs9VWWz0ujJ9JBM67iFYbIEdfDV9I2BaodgT5MIg/FTUmUv3oyQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
   <script src="./js/main.js"></script>
 

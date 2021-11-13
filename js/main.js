@@ -1,3 +1,51 @@
+// $(document).ready(function(){
+//     $('body').scrollspy({target: ".navbar", offset: 50});   
+//   });
+
+function servicesScroll() {
+    document.querySelector('.services').scrollIntoView({
+        behavior: 'smooth',
+    });
+}
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+                center: true
+            },
+            600: {
+                items: 2
+            },
+            900: {
+                items: 3
+            },
+            1196: {
+                items: 4
+            },
+            1440: {
+                items: 5
+            }
+
+        }
+    })
+},
+    $('.bxslider').bxSlider({
+        // captions: true,
+        video: true,
+    }),
+    $("#thing-with-videos").fitVids(),
+);
+// setTimeout(() => {
+//     let video_dom_reference = document.getElementById('video_id');
+//     video_dom_reference.style.display = 'block';
+// },2000);
+
 
 // With jQuery
 
@@ -33,10 +81,12 @@ $(window).scroll(function () {
 let res_nav = document.getElementById('responsive_navigation_section_id');
 let video_section_height = document.getElementById('video_section_id');
 let ham_Buger_Image_Zindex = document.getElementById('hamBugerImage');
+let header_Zindex = document.getElementById('header');
 var isResponsiveNavigationOpen = false;
 
 
 function openResponsiveNavigation() {
+    header_Zindex.style.zIndex = '0';
     isResponsiveNavigationOpen = true;
     res_nav.classList.add('open');
     video_section_height.style.minHeight = '100vh';
@@ -47,6 +97,7 @@ function openResponsiveNavigation() {
     });
 }
 function closeResponsiveNavigation() {
+    header_Zindex.style.zIndex = '999';
     isResponsiveNavigationOpen = false;
     res_nav.classList.remove('open');
     video_section_height.style.minHeight = 'auto';
@@ -61,14 +112,6 @@ var parlourImage = [];
 var imageCounter = 0;
 var services = ['parlour', 'logo', 'cosmetic', 'makeup'];
 
-
-// let parlour = getDomReference('parlour');
-// let parlourLength = parlour.children.length;
-// parlourImage = [];
-// for (let i = 0; i < parlourLength; i++) {
-//     parlourImage.push(parlour.children[i].childNodes[1].getAttribute('src'));
-// }
-// all_images = parlourImage;
 window.onload = beauty_parlour_filter('parlour');
 
 function beauty_parlour_filter(value) {
@@ -125,10 +168,6 @@ function apply_filter(service_value) {
 }
 
 // Full Screen Image With Js
-
-
-
-
 function popUpImage(srcImage) {
     console.log(srcImage);
     popup_image_domRef.style.display = 'block';
