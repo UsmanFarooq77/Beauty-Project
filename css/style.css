@@ -5,13 +5,7 @@
   font-family: "Playfair Display", serif;
   box-sizing: border-box;
 }
-/* body {
-  position: relative; 
-} */
 
-/* #video_id {
-  display: none;
-} */
 .video_section {
   position: relative;
   width: 100%;
@@ -37,19 +31,21 @@
   z-index: 1;
 }
 #header.fixed {
-  background-color: rgb(255, 145, 0);
+  background: linear-gradient(rgb(255, 145, 0), rgb(248, 193, 120));
   position: fixed;
   animation-name: fixed;
-  animation-duration: 0.4s;
-  transition: all 0.3s linear;
+  animation-duration: 0.6s;
+  transition: all 0.4s ease-in;
   z-index: 999;
 }
 @keyframes fixed {
   0% {
-    transform: translateY(7px);
+    transform: translate3d(0px,-50px,0px);
+    opacity: 0.5;
   }
   100% {
-    transform: translateY(0px);
+    transform: translate3d(0px,0px,0px);
+    opacity: 1;
   }
 }
 .video_section .header_section header nav {
@@ -688,7 +684,7 @@
     margin: 0px 0px 20px 0px;
   }
 }
-
+/* Achievements Section */
 #achievement .container-fluid .col-md-12 {
   padding-left: 0px;
   padding-right: 0px;
@@ -766,7 +762,7 @@
     font-size: 18px;
   }
 }
-
+/* Sponser Section */
 #sponser {
   margin: 50px 0px 50px 0px;
 }
@@ -794,12 +790,11 @@
   width: 15px !important;
 }
 
+/* Footer Section */
 #contact .container-fluid .row {
-  background-color: rgb(255, 145, 0);
+  background: linear-gradient(rgb(255, 180, 82), rgb(253, 145, 4));
 }
-/* .footer_section {
-  
-} */
+
 .footer_section .footer_details {
   padding: 20px 0px 0px 40px;
 }
@@ -884,4 +879,19 @@ button {
   button {
     width: 70%;
   }
+}
+
+/* Arrow Top */
+
+.arrow_top{
+  position: fixed;
+  bottom: 30px;
+  right: 48px;
+  z-index: 1111;
+  display: none;
+  cursor: pointer;
+}
+.arrow_top span i {
+  font-size: 60px;
+    color: darkorange;
 }

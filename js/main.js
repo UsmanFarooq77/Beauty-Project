@@ -1,6 +1,3 @@
-// $(document).ready(function(){
-//     $('body').scrollspy({target: ".navbar", offset: 50});   
-//   });
 
 function servicesScroll() {
     document.querySelector('.services').scrollIntoView({
@@ -9,6 +6,10 @@ function servicesScroll() {
 }
 
 $(document).ready(function () {
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    }),
     $('.owl-carousel').owlCarousel({
         loop: true,
         autoplay: true,
@@ -36,16 +37,21 @@ $(document).ready(function () {
     })
 },
     $('.bxslider').bxSlider({
-        // captions: true,
-        video: true,
+        mode: 'fade',
+        auto: true,
+        captions: true,
+        // autoControls: true,
+        // autoHover: true,
+        // stopAutoOnClick: true,
+        // ticker: true,
+        // touchEnabled: true,
+        // tickerHover: true,
+        // autoHover: true,
+        // pager: true,
+        // video: true,
     }),
-    $("#thing-with-videos").fitVids(),
+    // $("#thing-with-videos").fitVids(),
 );
-// setTimeout(() => {
-//     let video_dom_reference = document.getElementById('video_id');
-//     video_dom_reference.style.display = 'block';
-// },2000);
-
 
 // With jQuery
 
@@ -53,17 +59,29 @@ let header_section = $('#header');
 
 let header_postion = header_section.offset().top;
 
+let arrow_top_dom_reference = getDomReference('arrowTop');
+
 $(window).scroll(function () {
     let current_postion = $(this).scrollTop();
 
-    if (current_postion > 100 && !isResponsiveNavigationOpen) {
+    if (current_postion > 70 && !isResponsiveNavigationOpen) {
         header_section.addClass('fixed');
     }
     else {
         header_section.removeClass('fixed');
     }
+    if (current_postion > 500){
+        arrow_top_dom_reference.style.display = 'inline-block';
+        document.querySelector('.fa-arrow-circle-up').style.color = 'darkorange';
+    }
+    else {
+        arrow_top_dom_reference.style.display = 'none';
+    }
+    if($(window).scrollTop() + $(window).height() >= $(document).height() - 300) {
+        document.querySelector('.fa-arrow-circle-up').style.color = '#000';
+    }
+    
 });
-
 // With Javascript
 
 // window.addEventListener('scroll', function(){
@@ -259,7 +277,12 @@ $('.counter').counterUp({
     delay: 10,
     time: 3000
 });
-
+function scrollToTop(){
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    })
+}
 function getDomReference(id) {
     return document.getElementById(id);
 }
