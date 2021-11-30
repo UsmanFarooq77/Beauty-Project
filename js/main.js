@@ -15,6 +15,7 @@ $(document).ready(function () {
         autoplay: true,
         margin: 10,
         nav: true,
+        smartSpeed: 1000,
         responsive: {
             0: {
                 items: 1,
@@ -187,7 +188,6 @@ function apply_filter(service_value) {
 
 // Full Screen Image With Js
 function popUpImage(srcImage) {
-    console.log(srcImage);
     popup_image_domRef.style.display = 'block';
     for (let i = 0; i <= all_images.length - 1; i++) {
         imageCounter = i;

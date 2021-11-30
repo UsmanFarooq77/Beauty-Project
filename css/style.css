@@ -113,6 +113,10 @@
   font-size: 1.5rem;
 }
 
+.content_section .social_links ul li i{
+cursor: pointer;
+}
+
 .content_section .social_links .facebook_icon {
   background-color: rgb(95, 95, 243);
 }
@@ -176,6 +180,9 @@
   }
   .video_section .header_section header nav ul {
     display: none;
+  }
+  #hamBugerImage{
+    margin-right: 14px;
   }
   .content_section {
     top: 75px;
@@ -246,7 +253,7 @@
   min-height: 100vh;
   display: none;
   align-items: start;
-  color: aqua;
+  color: crimson;
   background-color: rgb(255, 145, 0);
   /* opacity: 0; */
   top: 0px;
@@ -300,6 +307,7 @@
 .responsive_navigation_section .responsive_navigation span a {
   color: #000;
   font-weight: 500;
+  text-decoration: none;
 }
 .responsive_navigation_section .responsive_social_links ul {
   display: flex;
@@ -318,6 +326,7 @@
 }
 .responsive_navigation_section .responsive_social_links ul li i {
   color: white;
+  cursor: pointer;
 }
 @media (max-width: 460px) {
   .responsive_navigation_section .responsive_social_links ul {
@@ -337,6 +346,9 @@
   text-align: center;
   margin-bottom: 25px;
 }
+.gallery_section .gallery_heading h1 {
+  color: rgb(255, 145, 0);
+}
 .gallery_section .gallery_categories {
   display: flex;
   justify-content: space-around;
@@ -348,6 +360,7 @@
 .gallery_section .gallery_categories p {
   margin-bottom: 0px;
   cursor: pointer;
+  padding: 10px;
 }
 .gallery_section .gallery_categories p:hover {
   background-color: tomato;
@@ -532,9 +545,10 @@
   margin-bottom: 50px;
   height: 100%;
 }
-.team_section .team_heading h2 {
+.team_section .team_heading h1 {
   text-align: center;
   font-weight: 700;
+  color: rgb(255, 145, 0);
 }
 .team_section .team_heading p {
   text-align: center;
@@ -769,7 +783,7 @@
 .sponser_section .sponser_heading_section h1 {
   text-align: center;
   font-weight: 700;
-  color: crimson;
+  color: rgb(255, 145, 0);
 }
 
 .sponser_section .sponser_heading_section p {
